@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PRDownlaodTask</string>
+    <string name="book_name">Book name</string>
+    <string name="book_description">Book description</string>
+    <string name="download">Download</string>
+    <string name="open">Open</string>
+</resources>

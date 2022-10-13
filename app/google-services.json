@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "446959808111",
+    "project_id": "example-d5e1d",
+    "storage_bucket": "example-d5e1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446959808111:android:c3ee5b804645d7a4d8679a",
+        "android_client_info": {
+          "package_name": "com.example.bazar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446959808111-03g1vg4922f0p9c2lv6ccaonlk1fs3mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZlbFnmkei3eRGWYzJizgyaU-ZihziIF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446959808111-03g1vg4922f0p9c2lv6ccaonlk1fs3mb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446959808111:android:f3413bd66b1233c5d8679a",
+        "android_client_info": {
+          "package_name": "uz.unidev.prdownlaodtask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446959808111-03g1vg4922f0p9c2lv6ccaonlk1fs3mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZlbFnmkei3eRGWYzJizgyaU-ZihziIF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446959808111-03g1vg4922f0p9c2lv6ccaonlk1fs3mb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
