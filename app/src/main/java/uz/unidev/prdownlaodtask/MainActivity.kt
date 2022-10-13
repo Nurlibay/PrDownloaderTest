@@ -13,6 +13,7 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import com.rajat.pdfviewer.PdfViewerActivity
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -56,8 +57,8 @@ class MainActivity : AppCompatActivity() {
                                         binding.progressHorizontal.visibility = View.VISIBLE
                                     }
                                     is Result.Progress -> {
-                                        binding.progressHorizontal.progress =
-                                            ((it.current / it.total) * 100).toInt()
+                                        binding.progressHorizontal.progress = ((it.current / it.total) * 100).toInt()
+                                        binding.btnDownload.text = ((it.current / it.total) * 100).toInt().toString()
                                     }
                                     is Result.End -> {
                                         binding.btnDownload.text = getString(R.string.open)
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                                                 it.fileName
                                             )
                                             if (file.exists()) {
-                                                openPdfViewer(it.fileName)
+                                                openPdfViewer(it.fileName, it.localPath)
                                             }
                                         }
                                         binding.progressHorizontal.visibility = View.INVISIBLE
@@ -97,7 +98,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun openPdfViewer(fileName: String) {
-        Toast.makeText(this, "$fileName opening...", Toast.LENGTH_SHORT).show()
+    private fun openPdfViewer(fileName: String, path: String) {
+        startActivity(
+            PdfViewerActivity.launchPdfFromPath(
+                this,
+                path,
+                fileName,
+                "pdf directory to save",
+                enableDownload = true
+            )
+        )
     }
 }

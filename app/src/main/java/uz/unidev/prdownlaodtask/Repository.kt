@@ -50,8 +50,9 @@ object Repository {
                 trySend(Result.Progress(it.currentBytes, it.totalBytes))
             }.start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
-                    trySend(Result.End(bookData.name))
+                    trySend(Result.End(bookData.name, dirPath))
                 }
+
                 override fun onError(error: Error?) {
                     Log.d("xatolik", error?.connectionException.toString())
                     Log.d("xatolik", error?.serverErrorMessage.toString())
@@ -66,7 +67,7 @@ object Repository {
 
 sealed interface Result {
     object Start : Result
-    class End(val fileName: String) : Result
+    class End(val fileName: String, val localPath: String) : Result
     class Progress(val current: Long, val total: Long) : Result
     class Error(val message: String) : Result
 }
